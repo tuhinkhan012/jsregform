@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+     //can you do use this or use required system. 
+      function validateForm() {
+        if(document.myForm.name.value==""){
+        alert("Please enter your information");
+        document.myForm.name.focus();
+        return false;
+      }
+      if(document.myForm.phone.value==""){
+        alert("please enter your information");
+        document.myForm.phone.focus();
+        return false;
+      }
+      if(document.myForm.bday.value=""){
+        alert("please enter your information");
+        document.myForm.bday.focus();
+        return false;
+      }
+      if(document.myForm.address.value=""){
+        alert("please enter your information");
+        document.myForm.address.focus();
+        return false;
+      }
+      return true;
+      }
+
+    </script>
+  </head>
+  <body>
+    <div class="container">
+       <h2>Registration Form</h2>
+    <div class="container">
+      <form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
+
+       <label for="fname">Name*</label><br>
+       <input type="text" name="name" placeholder="your name" maxlength="30" required><br>
+       <label for="pname">Father Name*</label><br>
+       <input type="text" name="name" placeholder="father name" maxlenght="30" required><br>
+       <label for="mname">Mother Name*</label><br>
+       <input type="text" name="mname" placeholder="mother name" maxlenght="30" required><br>
+       <label for="phone">Mobile Number*</label><br>
+       <select class="op">
+         <option value="1">016</option>
+         <option value="2">017</option>
+         <option value="3">015</option>
+         <option value="4">019</option>
+       </select>
+       <input type="phone" name="phone" maxlength="9" required><br>
+       <label for="email">E-mail</label><br>
+       <input type="text" name="email" placeholder="example@...com" required type="email"><br>
+       <label for="gender">Gender</label><br>
+       <input type="radio" name="gender" value="male" id="gender-male">
+       <label for="male" id="gender-male">Male</label>
+       <input type="radio" name="gender" value="female" id="gender-female">
+       <label for="female" id="gender-female">Female</label>
+       <input type="radio" name="gender" value="male" id="gender-male">
+       <label for="male" id="gender-male">Male</label><br>
+
+       <label for="bdate">Date of Birth*</label>
+       <input type="date" name="bday" value="" required><br>
+       <label for="country">Country Name</label>
+        <input type="text" name="country" value=""> <br>
+        <label for="nationality">Nationality</label>
+         <input type="text" name="nationality" value=""><br>
+         <label for="address">Address</label><br>
+         <textarea name="address" id="address" placeholder="write your address"
+         height="200px" rows="8" cols="50" required></textarea><br>
+
+           <input type="reset" name="" value="Reset">
+           <input type="submit" value="Submit">
+
+
+
+
+   </form>
+    </div>
+  </div>
+  </body>
+</html>
